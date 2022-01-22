@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'css/flex-slider.css' %}">
+	<link href="{% static 'css/voi.css' %}" type="text/css" rel="stylesheet">
+	<link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+
+	{% block cssfiles %}
+	
+	{% endblock cssfiles %}
+    <title>
+
+	
+	</title>
+</head>
+
+<body class="about-page">
+
+
+	<div class="header-wrap is-scroll">
+		<header>
+			<a href="{% url 'homepage' %}" class="logo">
+				<img src="img/logo.svg" class="lazyLoaded" alt="logo" style="">
+				<span class="logo-text">
+					<span>Crazy Socks</span>
+					<span>Escrow Services</span>
+				</span>
+			</a>
+			<div class="header-right">
+				<nav class="main-nav" data-menu-gradient="">
+					<ul class="menu">
+						<li class="active"><a href="{% url 'homepage' %}">Home</a></li>
+						<li class="">
+							<a href="">Services <svg xmlns="http://www.w3.org/2000/svg" class="show-sub-menu" viewBox="0 0 129 129" enable-background="new 0 0 129 129"><g><path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"></path></g></svg></a>
+							<ul class="sub-menu">
+								<li>
+									<a href="">Personal</a>
+								</li>
+								<li>
+									<a href="">Business</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="">About</a></li>
+						<li><a href="">{{ request.user }}</a></li>
+						<li><a href="{% url 'logoutPage' %}">LogOut</a></li>
+					
+						<li><a href=""></a></li>
+					</ul>
+					<span class="menu-gradient" style="left: 86.55px; width: 48.2833px;"></span>
+				</nav>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+	</div><div class="clone-nav" style="height: 64px;"></div>
+	<!-- End header -->
+	<!-- Begin page-name -->
+	<section class="page-name v-separator mb-xs-20 mb-md-25 mb-lg-65">
+		<div class="dark-line"></div>
+		<div class="page-name-content">
+			<div class="container">
+				<h1>cRAZY SOcks</h1>
+				<ul class="bread-crumbs">
+					<li><a href="{% url 'homepage' %}">Home</a></li>  
+					<li><p>Secure</p></li>
+				</ul>
+			</div>
+			<img src="{% static 'img/1.jpg' %}" class="page-name__bg lazyLoaded" alt="bg" style="">
+		</div>
+	</section>
+	<!-- End page-name -->
+	  
+	      
+			{% block searchform %}
+			
+			{% endblock searchform %}
+	  
+	
+	<div class="container">
+	{% block content %}
+	
+	
+	{% endblock content %}
+	</div>
+
+	<footer class="page-footer font-small black">
+	  <div class="footer-copyright text-center py-3">ndue-2022
+	  <br><small class="text-muted">All rights reserved!</small>
+	</div>
+	</footer>
+
+	<!-- JS Files -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/owl-carousel.js' %}"></script>
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+
+	{% block jsfiles %}
+	
+	{% endblock jsfiles %}
+</body>
+</html>

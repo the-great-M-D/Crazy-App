@@ -1,0 +1,47 @@
+{% extends "home/layout.html" %}
+{% load static %}
+{% block cssfiles %}
+
+{% endblock cssfiles %}
+{% block content %}
+<br>
+<style>
+    <style>#hint_id_username,
+    #hint_id_password1 {
+        display: none;
+    }
+</style>
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-9 col-lg-7 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><b>Register Account</b></h5>
+                    <form class="form-signin" method="POST" action="">
+                        {% csrf_token %}
+                        <fieldset class="form-group"><br>
+                            {% for field in form %}
+                            <div class="fieldWrapper">
+                                {{ field.errors }}
+                                {{ field.label }} {{ field }}
+                            </div>
+                            {% endfor %}
+                        </fieldset>
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign
+                                Up</button><br><br>
+                        </div>
+                        <small>
+                            <p class="text-center">Already Registered! <a href="{% url 'loginPage' %}"><b>Login Now!</b></a>
+                            </p>
+                        </small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+{% block jsfiles %}{% endblock jsfiles %}
