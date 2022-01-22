@@ -26,7 +26,7 @@ python-card-me==0.9.3
 python-dateutil==2.8.1
 python-decouple==3.3
 pytz==2020.1
-requests==2.24.0
+requests
 requests-oauthlib==1.3.0
 rope==0.17.0
 six==1.15.0
@@ -36,7 +36,7 @@ surlex==0.2.0
 toml==0.10.1
 tweepy==3.8.0
 unicodecsv==0.14.1
-urllib3==1.26.5
+urllib3
 virtualenv==20.0.24
 whitenoise==5.2.0
 wrapt==1.12.1
