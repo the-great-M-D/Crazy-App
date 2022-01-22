@@ -22,7 +22,7 @@ def register(request):
             form.save()
             name = form.cleaned_data.get('username')
             messages.success(request, f'Account Created For {name}')
-            return redirect('loginPage')    
+            return redirect('login')    
         context = {'form':form}
         return render(request, 'users/register.html', context)
     
@@ -57,10 +57,10 @@ def loginPage(request):
                 return redirect('updateProfile')
         else:
             messages.info(request, "Username OR Password Incorect ")
-        return render(request, 'users/login2.html')    
+        return render(request, 'users/login.html')    
 
 def logoutUser(request):
     logout(request)
-    return redirect('loginPage')
+    return redirect('login')
 
     
