@@ -1,0 +1,1 @@
+web: gunicorn Crazy_Socks_core.wsgi
