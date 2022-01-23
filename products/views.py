@@ -12,7 +12,7 @@ def addProduct(request):
             return redirect('home')
     else:
         form = ProductCreate()
-        return render(request, 'products/index.html', {'form':form})
+        return render(request, 'product/index.html', {'form':form})
         
         
 
