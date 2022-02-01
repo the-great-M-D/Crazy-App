@@ -21,3 +21,13 @@ class DashBoard(TemplateView):
         context = super(DashBoard, self).get_context_data(*args, **kwargs)
         context["products"] = Product.objects.all()
         return context
+    
+@method_decorator(login_required,name='dispatch')
+class CreateProduct(TemplateView):
+    template_name = 'home/dash.html'
+    
+    def get_context_data(self, *args, **kwargs):
+        context = super(CreateProduct, self).get_context_data(*args, **kwargs)
+        context = []
+        return 
+    
