@@ -6577,7 +6577,7 @@ textarea.form-control.is-invalid {
  user-select:none;
  background-color:transparent;
  border:1px solid transparent;
- /* padding:.375rem .75rem; */
+ padding:.375rem .75rem;
  font-size:1rem;
  line-height:1.5;
  border-radius:.25rem;
@@ -15066,7 +15066,7 @@ table tfoot td:last-child {
 .button {
  position:relative;
  min-width:186px;
- /* padding:20px 15px; */
+ 
  border:none;
  border-radius:30px;
  font-size:16px;
