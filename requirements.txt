@@ -19,7 +19,7 @@ lazy-object-proxy==1.4.3
 ldif3==3.1.1
 mccabe==0.6.1
 oauthlib==3.1.0
-Pillow==9.0.0
+Pillow==10.3.0
 psycopg2==2.8.6
 PySocks==1.7.1
 python-card-me==0.9.3
